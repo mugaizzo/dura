@@ -3,7 +3,7 @@ const pairs = [
   { letters: ["ف", "ف"] },
   // { letters: ['ا', 'ا'] },
   { letters: ["ا", "أ"] },
-  // { letters: ['أ', 'ا'] },
+  { letters: ['ا', 'آ'] },
   { letters: ["ب", "ب"] },
   { letters: ["ج", "ج"] },
   { letters: ["ط", "ط"] },
