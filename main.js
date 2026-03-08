@@ -3,7 +3,8 @@ const pairs = [
   { letters: ["ف", "ف"] },
   // { letters: ['ا', 'ا'] },
   { letters: ["ا", "أ"] },
-  { letters: ['ا', 'آ'] },
+  { letters: ["ا", "آ"] },
+  { letters: ["ا", "إ"] },
   { letters: ["ب", "ب"] },
   { letters: ["ج", "ج"] },
   { letters: ["ط", "ط"] },
@@ -72,5 +73,36 @@ document.addEventListener("click", () => {
 navList.querySelectorAll("a").forEach((link) => {
   link.addEventListener("click", () => {
     navList.classList.remove("open");
+  });
+});
+
+// ---- viewport persistence ----
+let scrollSaveTimeout;
+
+function saveScrollPosition() {
+  if (scrollSaveTimeout) clearTimeout(scrollSaveTimeout);
+  scrollSaveTimeout = setTimeout(() => {
+    // use scrollY; on some browsers documentElement.scrollTop is used
+    const y =
+      window.scrollY ||
+      document.documentElement.scrollTop ||
+      document.body.scrollTop ||
+      0;
+    localStorage.setItem("lastScrollY", String(y));
+  }, 150); // debounce
+}
+
+window.addEventListener("scroll", saveScrollPosition);
+
+window.addEventListener("load", () => {
+  const stored = localStorage.getItem("lastScrollY");
+  if (!stored) return;
+  const y = parseInt(stored, 10);
+  if (Number.isNaN(y)) return;
+
+  window.scrollTo({
+    top: y,
+    left: 0,
+    behavior: "auto",
   });
 });
