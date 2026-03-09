@@ -210,7 +210,8 @@ footer {
   position: absolute;
   top: -1.8em;
   right: 0;
-  font-size: 0.8em;
+  font-size: 0.5em;
+  font-weight: bold;
   color: var(--stack-color);
   z-index: 2;
   pointer-events: none;
@@ -259,8 +260,8 @@ footer {
   border-radius: 0.6rem;
   padding: 0.3rem 0;
   min-width: 11rem;
-  max-height: 40vh;           /* short */
-  overflow-y: auto;           /* scrollable */
+  max-height: 40vh; /* short */
+  overflow-y: auto; /* scrollable */
   display: none;
   flex-direction: column;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
@@ -272,12 +273,12 @@ footer {
 
 .sections-nav-list li a {
   display: block;
-  padding: 0.25rem 0.6rem;    /* tighter rows */
+  padding: 0.25rem 0.6rem; /* tighter rows */
   color: var(--text-secondary);
   text-decoration: none;
   font-size: 0.9rem;
   line-height: 1.3;
-  white-space: nowrap;        /* keep single line */
+  white-space: nowrap; /* keep single line */
   transition:
     color 0.2s ease,
     background 0.2s ease;
