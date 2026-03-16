@@ -22,7 +22,7 @@ pairs.forEach(({ letters: [l1, l2] }) => {
     "g",
   );
 
-  document.querySelectorAll(".shatr-awwal, .shatr-thani").forEach((span) => {
+  document.querySelectorAll(".shatr-awwal, .shatr-thani, .naskh").forEach((span) => {
     span.innerHTML = span.innerHTML.replace(
       pattern,
       (match, before, top, base, after) => {
