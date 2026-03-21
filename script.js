@@ -5,6 +5,7 @@ const pairs = [
   { letters: ["ا", "أ"] },
   { letters: ["ا", "آ"] },
   { letters: ["ا", "إ"] },
+  { letters: ["ا", "ا"] },
   { letters: ["ب", "ب"] },
   { letters: ["ج", "ج"] },
   { letters: ["ط", "ط"] },
